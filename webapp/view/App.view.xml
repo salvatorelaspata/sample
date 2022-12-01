@@ -1,0 +1,39 @@
+<mvc:View controllerName="project1.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <SplitApp id="app" initialDetail="Detail" initialMaster="Master">
+        <masterPages>
+            <Page id="Master" title="{i18n>title}">
+                <content>
+                    <List id="list" items="{modello>/listaMaster}" itemPress=".onItemPress" mode="SingleSelectMaster">
+                        <items>
+                            <ObjectListItem title="{modello>name}" type="Active" />
+                        </items>
+                    </List>
+                </content>
+            </Page>
+            <Page id="Master2" title="{i18n>title}">
+                <content>
+                    <Button text="onNavDetail1" press=".onNavDetail1"/>
+                    <Button text="onNavDetail2" press=".onNavDetail2"/>
+                </content>
+            </Page>
+        </masterPages>
+        <detailPages>
+            <Page id="Detail" title="{i18n>title}">
+                <content>
+                    <Text id="text" text="Testo" />
+                    <Label id="label" text="Label" />
+                    <Button text="onNavMaster1" press=".onNavMaster1"/>
+                    <Button text="onNavMaster2" press=".onNavMaster2"/>
+                </content>
+            </Page>
+            <Page id="Detail2" title="{i18n>title}">
+                <content>
+                    <Text id="text2" text="Testo2" />
+                    <Label id="label2" text="Label2" />
+                </content>
+            </Page>
+        </detailPages>
+    </SplitApp>
+</mvc:View>
